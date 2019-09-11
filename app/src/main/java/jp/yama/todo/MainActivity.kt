@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         fun displayFragment(fragmentManager: FragmentManager){
             val fragmentTransaction = fragmentManager.beginTransaction()
             val fragment = Outer.newInstance("init", "fragment")
-            fragmentTransaction.replace(R.id.fragment_outer, fragment)
+            fragmentTransaction.add(R.id.fragment_outer, fragment)
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
         }
